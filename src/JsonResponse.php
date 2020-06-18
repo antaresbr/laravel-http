@@ -13,7 +13,7 @@ class JsonResponse
         if (trim($code) != '') {
             $r['code'] = $code;
         }
-        $r['message'] = $message;
+        $r['message'] = __($message);
         $r['data'] = $data;
 
         return response()->json($r);
