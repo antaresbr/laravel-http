@@ -21,9 +21,19 @@ class JsonResponse
 
     public static function error($code, $message = null, $data = null)
     {
-        $message = !is_null($message) ? __($message) : HttpErrors::message($code);
+        if (is_array($code)) {
+            $error_code = array_key_exists('code', $code) ? $code['code'] : null;
+            $error_message = array_key_exists('message', $code) ? $code['message'] : null;
+        } else {
+            $error_code = $code;
+            $error_message = null;
+        }
 
-        return static::make(static::ERROR, $code, $message, $data);
+        if (!is_null($message)) {
+            $error_message = $message;
+        }
+
+        return static::make(static::ERROR, $error_code, $error_message, $data);
     }
 
     public static function successful($data, $message = null)

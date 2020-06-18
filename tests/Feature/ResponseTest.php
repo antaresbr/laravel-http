@@ -2,8 +2,8 @@
 
 namespace Antares\Http\Tests\Feature;
 
-use Antares\Http\HttpErrors;
 use Antares\Http\JsonResponse;
+use Antares\Http\Tests\HttpErrors;
 use Antares\Http\Tests\TestCase;
 
 class ResponseTest extends TestCase
@@ -11,7 +11,7 @@ class ResponseTest extends TestCase
     /** @test */
     public function validate_error_json_response()
     {
-        $response = JsonResponse::error(HttpErrors::GENERIC_ERROR, null, ['item' => 'Data Item', 'other' => 'Other Item']);
+        $response = JsonResponse::error(HttpErrors::error(HttpErrors::GENERIC_ERROR), null, ['item' => 'Data Item', 'other' => 'Other Item']);
         $rdo = $response->getData();
 
         $this->assertJson($response->content());
