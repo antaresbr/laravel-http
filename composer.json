@@ -15,6 +15,9 @@
         }
     ],
     "license": "MIT",
+    "require": {
+        "php": "^7"
+    },
     "autoload": {
         "psr-4": {
             "Antares\\Http\\": "src/"
