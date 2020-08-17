@@ -19,6 +19,9 @@
         "php": "^7"
     },
     "autoload": {
+        "files": [
+            "support/helpers.php"
+        ],
         "psr-4": {
             "Antares\\Http\\": "src/"
         }

@@ -20,6 +20,8 @@ abstract class AbstractHttpErrors
     //
     //------------------------------------------------------------
 
+    public const MESSAGES = [];
+
     public static function message($code, $default = null)
     {
         return array_key_exists($code, static::MESSAGES) ? static::MESSAGES[$code] : $default;
@@ -29,7 +31,7 @@ abstract class AbstractHttpErrors
     {
         return [
             'code' => $code,
-            'message' => static::message($code)
+            'message' => static::message($code),
         ];
     }
 }
