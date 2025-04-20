@@ -4,6 +4,7 @@ namespace Antares\Http\Tests\Unit;
 
 use Antares\Http\JsonResponse;
 use Antares\Http\Tests\TestCase;
+use PHPUnit\Framework\Attributes\Test;
 
 class JsonResponseTest extends TestCase
 {
@@ -25,14 +26,14 @@ class JsonResponseTest extends TestCase
         ];
     }
 
-    /** @test */
+    #[Test]
     public function validate_instance_type()
     {
         $response = JsonResponse::make();
         $this->assertInstanceOf(\Illuminate\Http\JsonResponse::class, $response);
     }
 
-    /** @test */
+    #[Test]
     public function validate_error_response()
     {
         $baseResponse = $this->getBaseResponse(JsonResponse::ERROR, 222);
@@ -41,7 +42,7 @@ class JsonResponseTest extends TestCase
         $this->assertEquals(json_encode($baseResponse), $response->content());
     }
 
-    /** @test */
+    #[Test]
     public function validate_successful_response()
     {
         $baseResponse = $this->getBaseResponse(JsonResponse::SUCCESSFUL);

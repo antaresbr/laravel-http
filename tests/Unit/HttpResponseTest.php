@@ -4,17 +4,18 @@ namespace Antares\Http\Tests\Unit;
 
 use Antares\Http\HttpResponse;
 use Antares\Http\Tests\TestCase;
+use PHPUnit\Framework\Attributes\Test;
 
 class HttpResponseTest extends TestCase
 {
-    /** @test */
+    #[Test]
     public function validate_instance_type()
     {
         $response = HttpResponse::make();
         $this->assertInstanceOf(\Illuminate\Http\Response::class, $response);
     }
 
-    /** @test */
+    #[Test]
     public function validate_response_content()
     {
         $content = 'Response Content.';
