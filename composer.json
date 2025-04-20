@@ -4,7 +4,7 @@
     "homepage": "https://github.com/antaresbr/laravel-http",
     "keywords": [
         "php",
-        "laravel",
+        "laravel 8",
         "http"
     ],
     "authors": [
@@ -16,7 +16,8 @@
     ],
     "license": "MIT",
     "require": {
-        "php": ">=8"
+        "php": "^8",
+        "laravel/framework": "^8"
     },
     "autoload": {
         "files": [

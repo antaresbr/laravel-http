@@ -1,8 +1,8 @@
 {
     "name": "antaresbr/laravel-http",
     "version": {
-        "major": 1,
-        "release": 3,
+        "major": 8,
+        "release": 0,
         "minor": 0
     }
 }
