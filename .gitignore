@@ -12,6 +12,7 @@
 /.vscode
 .env
 .env.backup
+.phpunit.cache
 .phpunit.result.cache
 phpunit.phar
 phpunit.phar.asc

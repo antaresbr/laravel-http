@@ -17,7 +17,7 @@
     "license": "MIT",
     "require": {
         "php": "^8",
-        "laravel/framework": "^9"
+        "laravel/framework": "^10"
     },
     "autoload": {
         "files": [
@@ -28,7 +28,7 @@
         }
     },
     "require-dev": {
-        "orchestra/testbench": "^7"
+        "orchestra/testbench": "^8"
     },
     "autoload-dev": {
         "psr-4": {
