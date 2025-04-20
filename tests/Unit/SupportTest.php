@@ -1,20 +1,20 @@
 <?php declare(strict_types=1);
 
-namespace Antares\Picklist\Api\Tests\Unit;
+namespace Antares\Http\Tests\Unit;
 
-use Antares\Picklist\Api\Tests\TestCase;
+use Antares\Http\Tests\TestCase;
 use PHPUnit\Framework\Attributes\Test;
 
 final class SupportTest extends TestCase
 {
     private function getPath()
     {
-        return ai_picklist_api_path();
+        return ai_http_path();
     }
 
     private function getInfos()
     {
-        return ai_picklist_api_infos();
+        return ai_http_infos();
     }
 
     #[Test]
